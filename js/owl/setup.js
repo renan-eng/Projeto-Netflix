@@ -14,3 +14,10 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+function openDialog() {
+    Avgrund.show( "#default-popup" );
+}
+function closeDialog() {
+    Avgrund.hide();
+}

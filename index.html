@@ -6,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/avground.css">
     <!-- OWL CSS -->
     <link rel="stylesheet" href="/css/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/owl/owl.theme.default.min.css">
+
+    <script>
+        function openDialog() {
+            Avgrund.show( "#default-popup" );
+        }
+        function closeDialog() {
+            Avgrund.hide();
+        }
+    </script>
+
+<script>
+    function openDialog2() {
+        Avgrund.show( "#default-popup2" );
+    }
+    function closeDialog2() {
+        Avgrund.hide();
+    }
+</script>
+
     <title>NETFLIX CLONE</title>
 </head>
 <body>
@@ -31,11 +51,11 @@
                     <h3 class="titulo">HOUSE OF CARDS</h3>
                     <p class="descricao">Um político inescrupuloso não mede esforços para conquistar o poder nos EUA neste drama vencedor do Emmy e do Globo de Ouro. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur quae magnam perferendis magni ducimus enim, corrupti nihil dolorum totam ullam sequi aperiam doloremque adipisci sit deserunt voluptatum dolores vel qui.</p>
                     <div class="botoes">
-                        <button role="button" class="botao botao-e">
+                        <button onclick="javascript:openDialog();" " role="button" class="botao botao-e">
                             <i class="fas fa-play"></i>
                             Assistir
                         </button>
-                        <button role="button" class="botao botao-d">
+                        <button onclick="javascript:openDialog2();" role="button" class="botao botao-d">
                             <i class="fas fa-info-circle"></i>
                             Mais informações
                         </button>
@@ -44,8 +64,7 @@
             </div>
         </main> 
     </div>
-    <!-- CARROSEL -->
-    
+    <!-- CARROSEL -->  
     <div class="carousel-filmes owl-stage">  
         <p class="lp">Lançamentos: </p>      
         <div   div class="owl-carousel owl-theme">
@@ -169,9 +188,43 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <p class="criador">Desenvolvido por Renan Guimarães</p>
+        </div>
+    </footer>
+
+    <aside id="default-popup" class="avgrund-popup">
+        <div class="video-container">
+            <iframe width="1334" height="759" src="https://www.youtube.com/embed/N0LTNe7sR_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            
+        </div>
+        <div class="cont">
+            <div class="bt-fechar">
+                <button class="bt-fechar" onclick="javascript:closeDialog();">Fechar</button>
+            </div>
+        </div>
+    </aside>
+
+    <aside id="default-popup2" class="avgrund-popup">
+        <div class="mais-info">
+            <h3 class="house">HOUSE OF CARDS</h3>
+            <p class="informacao">House of Cards é uma série de televisão americana de drama político, criada por Beau Willimon para o serviço de streaming Netflix. Tem como protagonista Kevin Spacey, como Francis Underwood, um político ambicioso que almeja um alto cargo público em Washington, D.C.. House of Cards é uma adaptação do romance homônimo escrito por Michael Dobbs e da minissérie britânica criada por Andrew Davies. A primeira temporada de treze episódios foi disponibilizada na íntegra no dia 1 de fevereiro de 2013. A segunda foi lançada no dia 14 de fevereiro de 2014 com o mesmo número de episódios. No Brasil a série também é transmitida pelo canal Paramount Channel e em Portugal a série é exibida em exclusivo no Canal TVSéries. Foi a primeira série transmitida em resolução 4K pela Netflix, sendo sucedida pelas remasterizações de Breaking Bad e Orange Is the New Black.
+            <br>
+            <br>
+            Sua temporada final chegou a plataforma em 2 de novembro de 2018, contando com oito episódios.</p>       
+        </div>
+        <div class="cont">
+            <div class="bt-fechar">
+                <button class="bt-fechar" onclick="javascript:closeDialog2();">Fechar</button>
+            </div>
+        </div>
+    </aside>
+
     <script src="https://kit.fontawesome.com/63fd8bdc07.js" crossorigin="anonymous"></script>
     <script src="/js/owl/jquery.min.js"></script>
     <script src="/js/owl/owl.carousel.min.js"></script>
     <script src="/js/owl/setup.js"></script>
+    <script type="text/javascript" src="js/avgrund.js"></script>
 </body>
 </html>
