@@ -16,12 +16,12 @@ body {
   font-size: 20px;
 }
 
-/* elemendtos da barra de navegaação */
+/* Elemendtos da barra de navegaação */
 
 header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 header nav a {
@@ -37,28 +37,104 @@ header nav a:hover {
 
 .logo {
   color: var(--vermelho);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 40px;
-  margin-right: 10px;
+  font-size: 29px;
+  margin-right: 20px;
 }
 
-/* elemendtos do filme principal */
-.filme-principal {
-  font-size: 16px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+.navbar {
+  position: sticky;
+}
+
+/* Elemendtos do filme principal */
+.container-body {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(20, 20, 20, 1)
+    ),
     url(/img/ex4kvQb0Ski5KL2fsnKQU2hV3oo.jpg);
-  height: 400px;
   background-size: cover;
+  height: 70vh;
+}
+
+.filme-principal {
+  font-size: 18px;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 100%),
+    url(/img/ex4kvQb0Ski5KL2fsnKQU2hV3oo.jpg); */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  height: 400px;
 }
 
 .filme-principal .descricao {
-  margin-bottom: 40px;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
-.titulo {
-  font-size: 40px;
+.filme-principal .titulo {
+  font-size: 50px;
+  margin-top: 15%;
+}
+
+.botao-d {
+  background-color: rgba(109, 109, 110, 0.7);
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  padding: 0.7rem 1rem;
+  margin-right: 0.3rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.botao-d:hover {
+  background-color: rgba(109, 109, 110, 0.6);
+}
+
+.botao-e {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 0.3rem;
+  color: rgb(0, 0, 0);
+  padding: 0.7rem 1rem;
+  margin-right: 0.3rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.botao-e:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.botao i {
+  margin-right: 0.8rem;
+}
+
+.container {
+  padding-left: 2rem;
+  margin-right: 1rem;
+}
+
+.filme-principal .container {
+  width: 60%;
+}
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.carousel-filmes {
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+
+.lp {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
 }
